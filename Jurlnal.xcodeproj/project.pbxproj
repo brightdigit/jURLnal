@@ -8,18 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		B316659B1EE2445000D436EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316659A1EE2445000D436EE /* AppDelegate.swift */; };
-		B316659D1EE2445000D436EE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B316659C1EE2445000D436EE /* ViewController.swift */; };
 		B316659F1EE2445000D436EE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B316659E1EE2445000D436EE /* Assets.xcassets */; };
 		B31665A21EE2445000D436EE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B31665A01EE2445000D436EE /* Main.storyboard */; };
+		B31665BE1EE245E200D436EE /* JurlnalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665BD1EE245E200D436EE /* JurlnalViewController.swift */; };
+		B31665C71EE2476000D436EE /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C31EE2476000D436EE /* Safari.swift */; };
+		B31665C81EE2476000D436EE /* SafariScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C41EE2476000D436EE /* SafariScripting.swift */; };
+		B31665C91EE2476000D436EE /* SBApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C51EE2476000D436EE /* SBApplicationProtocol.swift */; };
+		B31665CA1EE2476000D436EE /* SBObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C61EE2476000D436EE /* SBObjectProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B31665971EE2445000D436EE /* Jurlnal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jurlnal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B316659A1EE2445000D436EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B316659C1EE2445000D436EE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B316659E1EE2445000D436EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B31665A11EE2445000D436EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B31665A31EE2445000D436EE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B31665BD1EE245E200D436EE /* JurlnalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JurlnalViewController.swift; sourceTree = "<group>"; };
+		B31665C31EE2476000D436EE /* Safari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
+		B31665C41EE2476000D436EE /* SafariScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariScripting.swift; sourceTree = "<group>"; };
+		B31665C51EE2476000D436EE /* SBApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBApplicationProtocol.swift; sourceTree = "<group>"; };
+		B31665C61EE2476000D436EE /* SBObjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBObjectProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,13 +60,25 @@
 		B31665991EE2445000D436EE /* Jurlnal */ = {
 			isa = PBXGroup;
 			children = (
+				B31665A91EE2448000D436EE /* ScriptingBridge */,
 				B316659A1EE2445000D436EE /* AppDelegate.swift */,
-				B316659C1EE2445000D436EE /* ViewController.swift */,
 				B316659E1EE2445000D436EE /* Assets.xcassets */,
 				B31665A01EE2445000D436EE /* Main.storyboard */,
 				B31665A31EE2445000D436EE /* Info.plist */,
+				B31665BD1EE245E200D436EE /* JurlnalViewController.swift */,
 			);
 			path = Jurlnal;
+			sourceTree = "<group>";
+		};
+		B31665A91EE2448000D436EE /* ScriptingBridge */ = {
+			isa = PBXGroup;
+			children = (
+				B31665C31EE2476000D436EE /* Safari.swift */,
+				B31665C41EE2476000D436EE /* SafariScripting.swift */,
+				B31665C51EE2476000D436EE /* SBApplicationProtocol.swift */,
+				B31665C61EE2476000D436EE /* SBObjectProtocol.swift */,
+			);
+			path = ScriptingBridge;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,8 +153,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B316659D1EE2445000D436EE /* ViewController.swift in Sources */,
+				B31665BE1EE245E200D436EE /* JurlnalViewController.swift in Sources */,
+				B31665CA1EE2476000D436EE /* SBObjectProtocol.swift in Sources */,
+				B31665C81EE2476000D436EE /* SafariScripting.swift in Sources */,
+				B31665C91EE2476000D436EE /* SBApplicationProtocol.swift in Sources */,
 				B316659B1EE2445000D436EE /* AppDelegate.swift in Sources */,
+				B31665C71EE2476000D436EE /* Safari.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,12 +272,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = Jurlnal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.Jurlnal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -262,12 +288,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Mac Developer";
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = MLT7M394S7;
 				INFOPLIST_FILE = Jurlnal/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.brightdigit.Jurlnal;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
