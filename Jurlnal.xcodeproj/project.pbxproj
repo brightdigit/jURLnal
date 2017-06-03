@@ -18,7 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		B31665971EE2445000D436EE /* Jurlnal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jurlnal.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B31665971EE2445000D436EE /* jURLnal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = jURLnal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B316659A1EE2445000D436EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B316659E1EE2445000D436EE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B31665A11EE2445000D436EE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -52,7 +52,7 @@
 		B31665981EE2445000D436EE /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B31665971EE2445000D436EE /* Jurlnal.app */,
+				B31665971EE2445000D436EE /* jURLnal.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -84,9 +84,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B31665961EE2445000D436EE /* Jurlnal */ = {
+		B31665961EE2445000D436EE /* jURLnal */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B31665A61EE2445000D436EE /* Build configuration list for PBXNativeTarget "Jurlnal" */;
+			buildConfigurationList = B31665A61EE2445000D436EE /* Build configuration list for PBXNativeTarget "jURLnal" */;
 			buildPhases = (
 				B31665931EE2445000D436EE /* Sources */,
 				B31665941EE2445000D436EE /* Frameworks */,
@@ -96,9 +96,9 @@
 			);
 			dependencies = (
 			);
-			name = Jurlnal;
+			name = jURLnal;
 			productName = Jurlnal;
-			productReference = B31665971EE2445000D436EE /* Jurlnal.app */;
+			productReference = B31665971EE2445000D436EE /* jURLnal.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -131,7 +131,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B31665961EE2445000D436EE /* Jurlnal */,
+				B31665961EE2445000D436EE /* jURLnal */,
 			);
 		};
 /* End PBXProject section */
@@ -312,13 +312,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B31665A61EE2445000D436EE /* Build configuration list for PBXNativeTarget "Jurlnal" */ = {
+		B31665A61EE2445000D436EE /* Build configuration list for PBXNativeTarget "jURLnal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31665A71EE2445000D436EE /* Debug */,
 				B31665A81EE2445000D436EE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
