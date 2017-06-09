@@ -18,21 +18,24 @@ class JurlnalViewController: NSViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do view setup here.
-    let safariApplication = SBApplication(bundleIdentifier: "com.apple.Safari")! as SafariApplication
-    let safariWindows = safariApplication.windows?().flatMap({ $0 as? SafariWindow })
-    if let safariWindows = safariWindows {
-      let windowDictionary = safariWindows.reduce([String: SafariWindow](), { (dictionary, safariWindow) -> [String: SafariWindow] in
-        guard let name = safariWindow.name else {
+    if let application = SBApplication(bundleIdentifier: "com.apple.Safari") {
+      let safariApplication = application as SafariApplication
+      let safariWindows = safariApplication.windows?().flatMap({ $0 as? SafariWindow })
+      
+      if let safariWindows = safariWindows {
+        let windowDictionary = safariWindows.reduce([String: SafariWindow](), { (dictionary, safariWindow) -> [String: SafariWindow] in
+          guard let name = safariWindow.name else {
+            return dictionary
+          }
+          var dictionary = dictionary
+          dictionary[name] = safariWindow
           return dictionary
-        }
-        var dictionary = dictionary
-        dictionary[name] = safariWindow
-        return dictionary
-      })
-      self.windowsPopUpButton.removeAllItems()
-      self.windowsPopUpButton.addItems(withTitles: [String](windowDictionary.keys))
-      self.windowDictionary = windowDictionary
-      self.safariApplication = safariApplication
+        })
+        self.windowsPopUpButton.removeAllItems()
+        self.windowsPopUpButton.addItems(withTitles: [String](windowDictionary.keys))
+        self.windowDictionary = windowDictionary
+        self.safariApplication = safariApplication
+      }
     }
   }
   
