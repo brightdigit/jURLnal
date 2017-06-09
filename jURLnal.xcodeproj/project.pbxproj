@@ -24,6 +24,8 @@
 		B31665BD1EE245E200D436EE /* JurlnalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JurlnalViewController.swift; sourceTree = "<group>"; };
 		B31665C31EE2476000D436EE /* Safari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
 		B31665C41EE2476000D436EE /* SafariScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariScripting.swift; sourceTree = "<group>"; };
+		B3C0DDE21EEB3702001C1DAD /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		B3C0DDE41EEB3B79001C1DAD /* screen-shot.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "screen-shot.jpg"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -40,6 +42,8 @@
 		B316658E1EE2445000D436EE = {
 			isa = PBXGroup;
 			children = (
+				B3C0DDE31EEB3B79001C1DAD /* assets */,
+				B3C0DDE21EEB3702001C1DAD /* README.md */,
 				B31665991EE2445000D436EE /* Jurlnal */,
 				B31665981EE2445000D436EE /* Products */,
 			);
@@ -73,6 +77,14 @@
 				B31665C41EE2476000D436EE /* SafariScripting.swift */,
 			);
 			path = ScriptingBridge;
+			sourceTree = "<group>";
+		};
+		B3C0DDE31EEB3B79001C1DAD /* assets */ = {
+			isa = PBXGroup;
+			children = (
+				B3C0DDE41EEB3B79001C1DAD /* screen-shot.jpg */,
+			);
+			path = assets;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -112,7 +124,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B31665921EE2445000D436EE /* Build configuration list for PBXProject "jURLnal" */;
+			buildConfigurationList = B31665921EE2445000D436EE /* Build configuration list for PBXProject "Jurlnal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -295,7 +307,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B31665921EE2445000D436EE /* Build configuration list for PBXProject "jURLnal" */ = {
+		B31665921EE2445000D436EE /* Build configuration list for PBXProject "Jurlnal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31665A41EE2445000D436EE /* Debug */,
