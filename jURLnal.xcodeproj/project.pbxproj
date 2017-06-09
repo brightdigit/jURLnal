@@ -13,8 +13,6 @@
 		B31665BE1EE245E200D436EE /* JurlnalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665BD1EE245E200D436EE /* JurlnalViewController.swift */; };
 		B31665C71EE2476000D436EE /* Safari.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C31EE2476000D436EE /* Safari.swift */; };
 		B31665C81EE2476000D436EE /* SafariScripting.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C41EE2476000D436EE /* SafariScripting.swift */; };
-		B31665C91EE2476000D436EE /* SBApplicationProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C51EE2476000D436EE /* SBApplicationProtocol.swift */; };
-		B31665CA1EE2476000D436EE /* SBObjectProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = B31665C61EE2476000D436EE /* SBObjectProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +24,6 @@
 		B31665BD1EE245E200D436EE /* JurlnalViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JurlnalViewController.swift; sourceTree = "<group>"; };
 		B31665C31EE2476000D436EE /* Safari.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Safari.swift; sourceTree = "<group>"; };
 		B31665C41EE2476000D436EE /* SafariScripting.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SafariScripting.swift; sourceTree = "<group>"; };
-		B31665C51EE2476000D436EE /* SBApplicationProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBApplicationProtocol.swift; sourceTree = "<group>"; };
-		B31665C61EE2476000D436EE /* SBObjectProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SBObjectProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,8 +71,6 @@
 			children = (
 				B31665C31EE2476000D436EE /* Safari.swift */,
 				B31665C41EE2476000D436EE /* SafariScripting.swift */,
-				B31665C51EE2476000D436EE /* SBApplicationProtocol.swift */,
-				B31665C61EE2476000D436EE /* SBObjectProtocol.swift */,
 			);
 			path = ScriptingBridge;
 			sourceTree = "<group>";
@@ -118,7 +112,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B31665921EE2445000D436EE /* Build configuration list for PBXProject "Jurlnal" */;
+			buildConfigurationList = B31665921EE2445000D436EE /* Build configuration list for PBXProject "jURLnal" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -154,9 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B31665BE1EE245E200D436EE /* JurlnalViewController.swift in Sources */,
-				B31665CA1EE2476000D436EE /* SBObjectProtocol.swift in Sources */,
 				B31665C81EE2476000D436EE /* SafariScripting.swift in Sources */,
-				B31665C91EE2476000D436EE /* SBApplicationProtocol.swift in Sources */,
 				B316659B1EE2445000D436EE /* AppDelegate.swift in Sources */,
 				B31665C71EE2476000D436EE /* Safari.swift in Sources */,
 			);
@@ -303,7 +295,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B31665921EE2445000D436EE /* Build configuration list for PBXProject "Jurlnal" */ = {
+		B31665921EE2445000D436EE /* Build configuration list for PBXProject "jURLnal" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B31665A41EE2445000D436EE /* Debug */,
