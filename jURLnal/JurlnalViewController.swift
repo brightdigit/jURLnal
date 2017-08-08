@@ -9,53 +9,48 @@
 import Cocoa
 import ScriptingBridge
 
+extension Collection {
+  func toDictionary<K, V>
+    (_ transform:(_ element: Self.Generator.Element) -> (key: K, value: V)?) -> [K : V] {
+    
+    return self.reduce([:]) { ( dictionary, e) in
+      var dictionary = dictionary
+      if let (key, value) = transform(e){
+        dictionary[key] = value
+      }
+      return dictionary
+    }
+  }
+}
+
 class JurlnalViewController: NSViewController {
   @IBOutlet weak var windowsPopUpButton: NSPopUpButton!
   
-  var windowDictionary : [String: SafariWindow]?
-  var safariApplication : SafariApplication?
+  var windows : [String: SafariWindow]! = nil
+  var safariApplication : SafariApplication!
   
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do view setup here.
-    if let application = SBApplication(bundleIdentifier: "com.apple.Safari") {
-      let safariApplication = application as SafariApplication
-      let safariWindows = safariApplication.windows?().flatMap({ $0 as? SafariWindow })
-      
-      if let safariWindows = safariWindows {
-        let windowDictionary = safariWindows.reduce([String: SafariWindow](), { (dictionary, safariWindow) -> [String: SafariWindow] in
-          guard let name = safariWindow.name else {
-            return dictionary
-          }
-          var dictionary = dictionary
-          dictionary[name] = safariWindow
-          return dictionary
-        })
-        self.windowsPopUpButton.removeAllItems()
-        self.windowsPopUpButton.addItems(withTitles: [String](windowDictionary.keys))
-        self.windowDictionary = windowDictionary
-        self.safariApplication = safariApplication
-      }
-    }
+    let safariApplication = SBApplication(bundleIdentifier: "com.apple.Safari")! as SafariApplication
+    self.windows = safariApplication.windows!().reduce([String: SafariWindow](), { (dictionary, object) -> [String: SafariWindow] in
+      let window = object as! SafariWindow
+      var dictionary = dictionary
+      dictionary[window.name!] = window
+      return dictionary
+    })
+    self.windowsPopUpButton.removeAllItems()
+    self.windowsPopUpButton.addItems(withTitles: [String](self.windows.keys))
+    self.safariApplication = safariApplication
   }
   
   @IBAction func applyAction (_ button: NSButton) {
-    guard let selectedItem = self.windowsPopUpButton.selectedItem, let windowDictionary = self.windowDictionary else {
-      return
-    }
+    let window = self.windows[self.windowsPopUpButton.selectedItem!.title]
     
-    guard let window = windowDictionary[selectedItem.title] else {
-      return
-    }
-    
-    guard let tabs = window.tabs?() else {
-      return
-    }
-    
-    let urls : [NSURL] = tabs.flatMap{
-      let tab = $0 as? SafariTab
+    let urls : [NSURL] = window!.tabs!().flatMap{
+      let tab = $0 as! SafariTab
       
-      guard let urlString = tab?.URL else {
+      guard let urlString = tab.URL else {
         return nil
       }
       return NSURL(string: urlString)

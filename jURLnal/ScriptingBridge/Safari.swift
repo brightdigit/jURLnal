@@ -1,16 +1,6 @@
 import AppKit
 import ScriptingBridge
 
-@objc public protocol SBObjectProtocol: NSObjectProtocol {
-    func get() -> Any!
-}
-
-@objc public protocol SBApplicationProtocol: SBObjectProtocol {
-    func activate()
-    var delegate: SBApplicationDelegate! { get set }
-    var running: Bool { @objc(isRunning) get }
-}
-
 // MARK: SafariSaveOptions
 @objc public enum SafariSaveOptions : AEKeyword {
     case yes = 0x79657320 /* 'yes ' */
